@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/symbolSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:layout_below="@id/symbolSpinner"/>
+
+    <Button
+        android:id="@+id/btnGetMidValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Spot Value"
+        android:layout_below="@id/btnConfirm"
+        android:visibility="gone"/> <!-- Initially hidden -->
+
+    <TextView
+        android:id="@+id/midValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spot Value"
+        android:textSize="24sp"
+        android:layout_below="@id/btnGetMidValue"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/> <!-- Initially hidden -->
+
+    <!-- Strike Price EditText -->
+    <EditText
+        android:id="@+id/etStrikePrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Strike Price"
+        android:layout_below="@id/midValueTextView"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/> <!-- Initially hidden -->
+
+    <!-- Expiry EditText -->
+    <EditText
+        android:id="@+id/etExpiry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Expiry (days)"
+        android:layout_below="@id/etStrikePrice"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/> <!-- Initially hidden -->
+
+    <!-- Premium EditText -->
+    <EditText
+        android:id="@+id/etPremium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Premium"
+        android:layout_below="@id/etExpiry"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/> <!-- Initially hidden -->
+
+    <!-- Lot Size EditText -->
+    <EditText
+        android:id="@+id/etLotSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Lot Size"
+        android:layout_below="@id/etPremium"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/> <!-- Initially hidden -->
+
+    <!-- Role Spinner -->
+    <Spinner
+        android:id="@+id/spRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etLotSize"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/> <!-- Initially hidden -->
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Expected Return"
+        android:layout_below="@id/spRole"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/> <!-- Initially hidden -->
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:textSize="24sp"
+        android:layout_below="@id/btnCalculate"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/> <!-- Initially hidden -->
+</RelativeLayout>
